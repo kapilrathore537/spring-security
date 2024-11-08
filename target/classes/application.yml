@@ -1,0 +1,45 @@
+server:
+    port: 9091
+
+#  DATABASE AND JPA CONFIGURATION
+spring:
+  application:
+    name: gramseva
+  datasource:
+    url: jdbc:mysql://localhost:3306/gramseva?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Java@2023
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+
+
+  # Email SMTP Configuration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: javatesting406@gmail.com
+    password: tcukadgxyxyimnvo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# JWT AUTHENTICATION SECRET KEY
+secret:
+  key: 774488559966abcsdefghijklmnopqrstuvwxyz1234567890
+
+#  MULTIPART CONFIGURATION
+servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB

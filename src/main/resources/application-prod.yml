@@ -1,0 +1,25 @@
+server:
+  port: 9091
+
+#  DATABASE AND JPA CONFIGURATION
+spring:
+  application:
+    name: gramseva
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Java@2023
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+#  MULTIPART CONFIGURATION
+servlet:
+  multipart:
+    enabled: true
+    max-file-size: 20MB
+    max-request-size: 20MB
